@@ -14,6 +14,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- ===== Hero carrossel — intro DigiSat Web (novidade). Estilos scoped, não conflitam com o style.css ===== -->
+    <style>
+      .hero-carousel{display:grid;position:relative;overflow:hidden;}
+      .hero-carousel > .hero-slide{grid-area:1 / 1;width:100%;opacity:0;visibility:hidden;transition:opacity .9s ease, visibility 0s linear .9s;}
+      .hero-carousel > .hero-slide.is-active{opacity:1;visibility:visible;transition:opacity .9s ease, visibility 0s linear 0s;}
+      .hero-carousel > .hero-slide:not(.is-active){pointer-events:none;}
+
+      /* ----- Slide 1: novidade DigiSat Web ----- */
+      .hero-slide--novidade{position:relative;}
+      .hero-bg-tela{position:absolute;inset:0;z-index:0;pointer-events:none;
+        background-image:var(--tela-img);background-size:cover;background-position:center;
+        opacity:.16;}
+      .hero-bg-tela::after{content:"";position:absolute;inset:0;
+        background:linear-gradient(180deg,rgba(9,26,58,.55) 0%,rgba(9,26,58,.82) 100%);}
+      .hero-novidade-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;}
+      .hero-novidade-text h1{margin:.15em 0 .35em;line-height:1.1;}
+      .hero-badge--novo{display:inline-block;background:linear-gradient(90deg,#f97316,#ef4444);color:#fff;
+        font-weight:700;padding:7px 16px;border-radius:999px;font-size:.85rem;letter-spacing:.02em;margin-bottom:8px;}
+      .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;}
+      .hero-btn{display:inline-flex;align-items:center;gap:8px;background:#ef4444;color:#fff;font-weight:700;
+        padding:14px 26px;border-radius:10px;text-decoration:none;transition:transform .2s,filter .2s;}
+      .hero-btn:hover{transform:translateY(-2px);filter:brightness(1.08);}
+      .hero-btn--ghost{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.35);}
+      .hero-video-frame{position:relative;width:100%;padding-bottom:56.25%;border-radius:14px;overflow:hidden;
+        box-shadow:0 22px 55px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.14);background:#000;}
+      .hero-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+      /* ----- Indicadores (permitem pular manualmente) ----- */
+      .hero-dots{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:6;}
+      .hero-dots button{width:11px;height:11px;border-radius:50%;border:0;background:rgba(255,255,255,.4);
+        cursor:pointer;padding:0;transition:background .25s,width .25s;}
+      .hero-dots button:hover{background:rgba(255,255,255,.7);}
+      .hero-dots button.is-active{background:#fff;width:28px;border-radius:6px;}
+
+      @media (max-width:860px){
+        .hero-novidade-grid{grid-template-columns:1fr;gap:26px;text-align:center;}
+        .hero-cta-row{justify-content:center;}
+      }
+      @media (prefers-reduced-motion:reduce){
+        .hero-carousel > .hero-slide{transition:opacity .01s;}
+      }
+    </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -62,16 +106,49 @@
         </div>
     </header>
 
-    <div class="hero">
-        <div class="container">
-            <div class="hero-badge">🏆 Revenda Autorizada DigiSat</div>
-            <h1>Soluções inteligentes em <em>gestão empresarial</em> para o seu negócio</h1>
-            <p class="sub">A Guion Informática é revenda autorizada DigiSat — tecnologia com mais de 34 anos de mercado e 128.000+ negócios atendidos em todo o Brasil.</p>
-            <div class="hero-stats">
-                <div class="stat"><div class="num">34+</div><div class="label">Anos de Mercado</div></div>
-                <div class="stat"><div class="num">128K+</div><div class="label">Negócios Atendidos</div></div>
-                <div class="stat"><div class="num">8</div><div class="label">Segmentos Atendidos</div></div>
+    <div class="hero hero-carousel">
+
+        <!-- ===== Slide 1: Novidade — Sistema DigiSat Web (fica 10s) ===== -->
+        <div class="hero-slide hero-slide--novidade is-active" data-slide="0">
+            <!-- Tela do sistema (imagem 1) como fundo no espaço azul.
+                 Salve o print da tela do sistema como: img/digisatweb-tela.png -->
+            <div class="hero-bg-tela" aria-hidden="true" style="--tela-img:url('img/digisatweb-tela.png');"></div>
+            <div class="container hero-novidade-grid">
+                <div class="hero-novidade-text">
+                    <span class="hero-badge--novo">✨ Novidade</span>
+                    <h1>Sistema <em>DigiSat Web</em></h1>
+                    <p class="sub">A solução para quem busca agilidade e versatilidade para aumentar os lucros do negócio. Controle de notas e cupons fiscais, financeiro, cadastros e estoque — tudo na nuvem, com interface intuitiva e acesso de qualquer lugar.</p>
+                    <div class="hero-cta-row">
+                        <a class="hero-btn" href="digisatweb.html">▶️ Conhecer o DigiSatWeb</a>
+                        <a class="hero-btn hero-btn--ghost" href="https://wa.me/5515996542319?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Guion%20Inform%C3%A1tica%20e%20quero%20conhecer%20o%20DigiSatWeb." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+                    </div>
+                </div>
+                <div class="hero-novidade-video">
+                    <div class="hero-video-frame">
+                        <iframe src="https://www.youtube-nocookie.com/embed/y21h_svAWwo" title="DigiSatWeb — vídeo de apresentação" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- ===== Slide 2: Frase atual (aparece após 10s e permanece) ===== -->
+        <div class="hero-slide hero-slide--principal" data-slide="1">
+            <div class="container">
+                <div class="hero-badge">🏆 Revenda Autorizada DigiSat</div>
+                <h1>Soluções inteligentes em <em>gestão empresarial</em> para o seu negócio</h1>
+                <p class="sub">A Guion Informática é revenda autorizada DigiSat — tecnologia com mais de 34 anos de mercado e 128.000+ negócios atendidos em todo o Brasil.</p>
+                <div class="hero-stats">
+                    <div class="stat"><div class="num">34+</div><div class="label">Anos de Mercado</div></div>
+                    <div class="stat"><div class="num">128K+</div><div class="label">Negócios Atendidos</div></div>
+                    <div class="stat"><div class="num">8</div><div class="label">Segmentos Atendidos</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicadores -->
+        <div class="hero-dots" role="tablist" aria-label="Destaques">
+            <button class="is-active" type="button" aria-label="Novidade DigiSat Web"></button>
+            <button type="button" aria-label="Sobre a Guion Informática"></button>
         </div>
     </div>
 
@@ -265,6 +342,38 @@
     </footer>
 
     <a class="whats-float" href="https://wa.me/5515996542319?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Guion%20Inform%C3%A1tica%20e%20quero%20saber%20mais%20sobre%20os%20sistemas%20DigiSat." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">💬</a>
+
+    <!-- ===== Hero carrossel: 10s no slide da novidade, depois fade para a frase atual ===== -->
+    <script>
+      (function(){
+        var carousel = document.querySelector('.hero-carousel');
+        if(!carousel) return;
+        var slides = carousel.querySelectorAll('.hero-slide');
+        var dots   = carousel.querySelectorAll('.hero-dots button');
+        var current = 0, timer = null;
+        var INTRO_MS = 10000; // tempo do slide da novidade (10 segundos)
+
+        function go(i){
+          if(i === current) return;
+          slides[current].classList.remove('is-active');
+          if(dots[current]) dots[current].classList.remove('is-active');
+          current = i;
+          slides[current].classList.add('is-active');
+          if(dots[current]) dots[current].classList.add('is-active');
+        }
+
+        // Permite pular manualmente pelos indicadores (cancela o timer automático)
+        dots.forEach(function(dot, i){
+          dot.addEventListener('click', function(){
+            clearTimeout(timer);
+            go(i);
+          });
+        });
+
+        // Após 10s exibindo a novidade, faz o fade para a frase atual e permanece nela
+        timer = setTimeout(function(){ go(1); }, INTRO_MS);
+      })();
+    </script>
 
     <script src="js/main.js"></script>
 </body>
