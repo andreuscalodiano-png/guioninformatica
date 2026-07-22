@@ -49,6 +49,13 @@
       .hero-dots button:hover{background:rgba(255,255,255,.7);}
       .hero-dots button.is-active{background:#fff;width:28px;border-radius:6px;}
 
+      /* ----- Botão "Abrir CRM" no topo (para os vendedores) ----- */
+      .header-cta{display:flex;align-items:center;gap:10px;}
+      .header-crm{display:inline-flex;align-items:center;gap:7px;background:#fff;color:#0d3b7a;
+        font-weight:700;padding:9px 16px;border-radius:9px;text-decoration:none;border:1px solid #cdd8ea;
+        white-space:nowrap;transition:transform .2s,box-shadow .2s;}
+      .header-crm:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.18);}
+
       @media (max-width:860px){
         .hero-novidade-grid{grid-template-columns:1fr;gap:26px;text-align:center;}
         .hero-cta-row{justify-content:center;}
@@ -101,6 +108,7 @@
                 <a href="#contato">Fale Conosco</a>
             </nav>
             <div class="header-cta">
+                <a class="header-crm" href="https://bridge-crm-one.vercel.app/login" target="_blank" rel="noopener">📊 Abrir CRM</a>
                 <a href="https://wa.me/5515996542319?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Guion%20Inform%C3%A1tica%20e%20quero%20saber%20mais%20sobre%20os%20sistemas%20DigiSat." target="_blank" rel="noopener">💬 WhatsApp</a>
             </div>
         </div>
@@ -125,7 +133,7 @@
                 </div>
                 <div class="hero-novidade-video">
                     <div class="hero-video-frame">
-                        <iframe src="https://www.youtube-nocookie.com/embed/s830zEVj1v4" title="DigiSatWeb — vídeo de apresentação" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/s830zEVj1v4?autoplay=1&mute=1&playsinline=1&rel=0" title="DigiSatWeb — vídeo de apresentação" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
