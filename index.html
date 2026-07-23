@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guion Informática — Revenda Autorizada DigiSat | Sistemas de Gestão e Automação Comercial</title>
-    <meta name="description" content="Sistemas de gestão empresarial DigiSat para mercados, oficinas, autopeças, papelarias, calçados, confecções e varejo. Revenda autorizada com suporte especializado. Fale pelo WhatsApp.">
+    <title>Sistema para Comércio, Automação Comercial e Nota Fiscal (NF-e/NFC-e) | Guion Informática — Revenda DigiSat</title>
+    <meta name="description" content="Sistema para comércio com automação comercial e emissão de nota fiscal (NF-e, NFC-e, NFS-e, SAT). Revenda autorizada DigiSat para mercados, oficinas, autopeças, papelarias, calçados, confecções e varejo. Demonstração gratuita pelo WhatsApp.">
+    <meta name="keywords" content="sistema para comércio, automação comercial, nota fiscal eletrônica, NF-e, NFC-e, NFS-e, emissão de nota fiscal, sistema de gestão empresarial, PDV, cupom fiscal, sistema fiscal, DigiSat, automação de vendas, controle de estoque, sistema para mercado, sistema para oficina, sistema para autopeças">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Guion Informática">
+    <meta name="geo.region" content="BR-SP">
     <link rel="canonical" href="https://guioninformatica.com.br/">
-    <meta property="og:title" content="Guion Informática — Revenda Autorizada DigiSat">
-    <meta property="og:description" content="Sistemas de gestão empresarial e automação comercial para 8 segmentos. Demonstração gratuita pelo WhatsApp.">
+    <meta property="og:title" content="Sistema para Comércio, Automação Comercial e Nota Fiscal | Guion Informática">
+    <meta property="og:description" content="Sistema para comércio com automação comercial e emissão de nota fiscal (NF-e, NFC-e, NFS-e, SAT). Revenda autorizada DigiSat. Demonstração gratuita pelo WhatsApp.">
     <meta property="og:url" content="https://guioninformatica.com.br/">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Guion Informática">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sistema para Comércio, Automação Comercial e Nota Fiscal | Guion Informática">
+    <meta name="twitter:description" content="Sistema para comércio com automação comercial e emissão de nota fiscal (NF-e, NFC-e, NFS-e, SAT). Revenda autorizada DigiSat.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
@@ -63,6 +72,18 @@
       @media (prefers-reduced-motion:reduce){
         .hero-carousel > .hero-slide{transition:opacity .01s;}
       }
+
+      /* ----- Formas de pagamento (rodapé) ----- */
+      .formas-pagamento{padding:0 0 6px;}
+      .fp-head{background:#0d1b3e;padding:22px 16px;text-align:center;}
+      .fp-head h2{color:#fff;margin:0;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:.06em;text-transform:uppercase;}
+      .fp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto;padding:38px 16px 30px;text-align:center;}
+      .fp-item .fp-icon{font-size:2rem;line-height:1;margin-bottom:14px;}
+      .fp-item h3{margin:0 0 8px;color:#1f3a63;font-size:clamp(1.2rem,2.4vw,1.6rem);}
+      .fp-item p{margin:0;color:#8a93a6;font-size:.92rem;}
+      @media (max-width:620px){
+        .fp-grid{grid-template-columns:1fr;gap:30px;}
+      }
     </style>
 
     <script type="application/ld+json">
@@ -70,11 +91,53 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Guion Informática",
-      "description": "Revenda autorizada DigiSat — sistemas de gestão empresarial e automação comercial.",
+      "description": "Revenda autorizada DigiSat — sistema para comércio, automação comercial e emissão de nota fiscal eletrônica (NF-e, NFC-e, NFS-e, SAT).",
       "url": "https://guioninformatica.com.br",
       "telephone": "+55-15-99654-2319",
+      "priceRange": "$$",
       "areaServed": "BR",
-      "openingHours": "Mo-Fr 08:00-18:00"
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "knowsAbout": [
+        "Sistema para comércio",
+        "Automação comercial",
+        "Emissão de nota fiscal eletrônica",
+        "NF-e",
+        "NFC-e",
+        "NFS-e",
+        "SAT",
+        "Cupom fiscal",
+        "PDV",
+        "Controle de estoque",
+        "Sistema de gestão empresarial"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sistema para comércio com automação comercial",
+            "description": "Sistema de gestão empresarial para automação comercial e controle de vendas, estoque e financeiro."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Emissão de nota fiscal eletrônica",
+            "description": "Emissão de NF-e, NFC-e, NFS-e e cupom fiscal SAT, sempre adequada à legislação fiscal vigente."
+          }
+        }
+      ],
+      "paymentAccepted": ["PIX", "Cartão de crédito"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Guion Informática",
+      "url": "https://guioninformatica.com.br",
+      "inLanguage": "pt-BR"
     }
     </script>
 </head>
@@ -165,7 +228,7 @@
             <div class="section-head">
                 <span class="eyebrow">Sistemas</span>
                 <h2>Nossos Sistemas DigiSat</h2>
-                <p>Escolha a solução ideal para o seu negócio.</p>
+                <p>Sistema para comércio com automação comercial e emissão de nota fiscal (NF-e, NFC-e, NFS-e e SAT) — escolha a solução ideal para o seu negócio.</p>
             </div>
             <div class="sistemas-grid">
                 <div class="card-sistema">
@@ -333,6 +396,22 @@
             <p>Fale diretamente com nosso time comercial pelo WhatsApp e agende uma demonstração gratuita.</p>
             <a class="btn-whatsapp" href="https://wa.me/5515996542319?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Guion%20Inform%C3%A1tica%20e%20quero%20saber%20mais%20sobre%20os%20sistemas%20DigiSat." target="_blank" rel="noopener">💬 Fale pelo WhatsApp</a>
             <div class="horario">(15) 99654-2319 · Segunda a Sexta, das 8h às 18h</div>
+        </div>
+    </section>
+
+    <section class="formas-pagamento" aria-label="Formas de pagamento">
+        <div class="fp-head"><h2>Formas de Pagamento</h2></div>
+        <div class="container fp-grid">
+            <div class="fp-item">
+                <div class="fp-icon">💵</div>
+                <h3>PIX com 10%</h3>
+                <p>Oferta válida para Taxa de Ativação ou Plano Anual</p>
+            </div>
+            <div class="fp-item">
+                <div class="fp-icon">💳</div>
+                <h3>Cartão em 6X</h3>
+                <p>Oferta válida para Taxa de Ativação ou Plano Anual</p>
+            </div>
         </div>
     </section>
 
