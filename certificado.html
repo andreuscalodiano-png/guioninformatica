@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado Digital A1 Online | Guion Informática — Emita suas Notas Fiscais</title>
+    <meta name="description" content="Compre seu Certificado Digital e-CNPJ A1 100% online e emita notas fiscais (NF-e, NFC-e, NFS-e) sem sair do lugar. R$ 149,00 no PIX ou R$ 169,00 em até 12x no cartão. Fale com um consultor.">
+    <meta name="keywords" content="certificado digital, certificado digital A1, e-CNPJ A1, certificado digital online, emissão de nota fiscal, NF-e, NFC-e, certificado para nota fiscal, comprar certificado digital">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://guioninformatica.com.br/certificado.html">
+    <meta property="og:title" content="Certificado Digital A1 Online | Guion Informática">
+    <meta property="og:description" content="Compre seu Certificado Digital A1 100% online e emita suas notas fiscais sem sair do lugar. R$ 149,00 no PIX ou R$ 169,00 em 12x.">
+    <meta property="og:url" content="https://guioninformatica.com.br/certificado.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ===== Estilos scoped da página de Certificado ===== -->
+    <style>
+      .cert-hero .container{position:relative;z-index:1;}
+      .cert-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+      .cert-badge{display:inline-block;background:linear-gradient(90deg,#f97316,#ef4444);color:#fff;
+        font-weight:700;padding:7px 16px;border-radius:999px;font-size:.85rem;margin-bottom:14px;}
+      .cert-hero-grid h1{line-height:1.12;margin:.1em 0 .35em;}
+      .cert-cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;}
+      .cert-btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;padding:15px 28px;
+        border-radius:11px;text-decoration:none;transition:transform .2s,filter .2s,box-shadow .2s;}
+      .cert-btn--buy{background:#16a34a;color:#fff;box-shadow:0 12px 30px rgba(22,163,74,.35);}
+      .cert-btn--buy:hover{transform:translateY(-2px);filter:brightness(1.06);}
+      .cert-btn--talk{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.4);}
+      .cert-btn--talk:hover{transform:translateY(-2px);background:rgba(255,255,255,.16);}
+
+      /* Card de preço */
+      .cert-price-card{background:#fff;border-radius:18px;padding:30px;color:#1f2a44;
+        box-shadow:0 26px 60px rgba(0,0,0,.28);text-align:center;}
+      .cert-price-card .tipo{font-weight:700;color:#0d3b7a;font-size:1.15rem;margin-bottom:2px;}
+      .cert-price-card .val-sub{color:#64748b;font-size:.9rem;margin-bottom:18px;}
+      .cert-price-card .pix{font-size:2.6rem;font-weight:800;color:#16a34a;line-height:1;margin:6px 0;}
+      .cert-price-card .pix small{display:block;font-size:.9rem;color:#64748b;font-weight:600;margin-top:6px;}
+      .cert-price-card .divisor{border:0;border-top:1px solid #e6ebf3;margin:18px 0;}
+      .cert-price-card .cartao{font-size:1.5rem;font-weight:800;color:#0d3b7a;}
+      .cert-price-card .cartao small{display:block;font-size:.85rem;color:#64748b;font-weight:600;margin-top:4px;}
+      .cert-price-card .selo{display:inline-block;margin-top:16px;background:#eef7ff;color:#0d3b7a;
+        font-weight:700;font-size:.8rem;padding:6px 14px;border-radius:999px;}
+
+      /* Passo a passo */
+      .passos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+      .passo{background:#fff;border:1px solid #e6ebf3;border-radius:14px;padding:26px 20px;text-align:center;
+        box-shadow:0 8px 24px rgba(13,59,122,.06);}
+      .passo .num{width:44px;height:44px;margin:0 auto 14px;border-radius:50%;background:#0d3b7a;color:#fff;
+        font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+      .passo h3{margin:0 0 8px;font-size:1.05rem;color:#1f2a44;}
+      .passo p{margin:0;color:#64748b;font-size:.92rem;}
+
+      /* FAQ */
+      .faq-wrap{max-width:820px;margin:0 auto;}
+      .faq-item{background:#fff;border:1px solid #e6ebf3;border-radius:12px;margin-bottom:14px;overflow:hidden;}
+      .faq-item summary{cursor:pointer;padding:18px 22px;font-weight:700;color:#1f2a44;list-style:none;
+        display:flex;justify-content:space-between;align-items:center;gap:12px;}
+      .faq-item summary::-webkit-details-marker{display:none;}
+      .faq-item summary::after{content:"+";font-size:1.4rem;color:#0d3b7a;transition:transform .2s;}
+      .faq-item[open] summary::after{transform:rotate(45deg);}
+      .faq-item .faq-a{padding:0 22px 20px;color:#475569;line-height:1.6;}
+
+      @media (max-width:900px){
+        .cert-hero-grid{grid-template-columns:1fr;gap:30px;}
+        .passos-grid{grid-template-columns:1fr 1fr;}
+      }
+      @media (max-width:560px){
+        .passos-grid{grid-template-columns:1fr;}
+        .cert-cta-row{flex-direction:column;}
+        .cert-btn{justify-content:center;}
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo-area">
+                <a href="index.html">
+                    <div class="name">Guion <span>Informática</span></div>
+                    <div class="tagline">Revenda Autorizada DigiSat</div>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+            <nav class="main-nav">
+                <a href="index.html#sistemas">Sistemas</a>
+                <div class="dropdown">
+                    <a href="index.html#segmentos">Segmentos</a>
+                    <div class="dropdown-content">
+                        <a href="autopecas.html">🔧 Autopeças</a>
+                        <a href="calcados.html">👟 Calçados</a>
+                        <a href="comercio-geral.html">🏪 Comércio em Geral</a>
+                        <a href="confeccoes.html">👗 Lojas de Confecções</a>
+                        <a href="varejo.html">🛍️ Lojas de Varejo</a>
+                        <a href="mercados.html">🛒 Mercados e Supermercados</a>
+                        <a href="oficinas.html">🔩 Oficinas</a>
+                        <a href="papelarias.html">📚 Papelarias</a>
+                    </div>
+                </div>
+                <a href="index.html#videos">Vídeos</a>
+                <a href="certificado.html" class="active">Certificado</a>
+                <a href="index.html#contato">Fale Conosco</a>
+            </nav>
+            <div class="header-cta">
+                <a class="header-crm" href="https://bridge-crm-one.vercel.app/login" target="_blank" rel="noopener">📊 Abrir CRM</a>
+                <a href="https://wa.me/5515997427437?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20Certificado%20Digital%20A1." target="_blank" rel="noopener">💬 WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero cert-hero">
+        <div class="container">
+            <div class="cert-hero-grid">
+                <div>
+                    <span class="cert-badge">🔐 Certificado Digital A1</span>
+                    <h1>Emita suas notas fiscais <em>sem sair do lugar</em></h1>
+                    <p class="sub">Compre seu Certificado Digital e-CNPJ A1 <strong>100% online</strong> e garanta 1 ano de emissão de NF-e, NFC-e e NFS-e com validade jurídica. Rápido, seguro e sem burocracia.</p>
+                    <div class="cert-cta-row">
+                        <a class="cert-btn cert-btn--buy" href="https://www.asaas.com/c/ndst8ztg9lzk8er2" target="_blank" rel="noopener">🛒 Comprar online agora</a>
+                        <a class="cert-btn cert-btn--talk" href="https://wa.me/5515997427437?text=Ol%C3%A1%21%20Quero%20falar%20com%20um%20consultor%20sobre%20o%20Certificado%20Digital%20A1." target="_blank" rel="noopener">💬 Falar com consultor</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="cert-price-card">
+                        <div class="tipo">Certificado e-CNPJ A1</div>
+                        <div class="val-sub">Validade de 1 ano · 100% online</div>
+                        <div class="pix">R$ 149,00<small>à vista no PIX</small></div>
+                        <hr class="divisor">
+                        <div class="cartao">ou R$ 169,00<small>em até 12x no cartão</small></div>
+                        <div class="selo">✅ Emissão rápida e segura</div>
+                        <div class="cert-cta-row" style="margin-top:22px;justify-content:center;">
+                            <a class="cert-btn cert-btn--buy" href="https://www.asaas.com/c/ndst8ztg9lzk8er2" target="_blank" rel="noopener">Comprar agora →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Vantagens</span>
+                <h2>Por que escolher o Certificado A1?</h2>
+                <p>O modelo ideal para quem emite notas no dia a dia e quer praticidade.</p>
+            </div>
+            <div class="motivos-grid">
+                <div class="card-motivo"><div class="icon">💻</div><h3>100% Online</h3><p>Compra e emissão pela internet, sem precisar ir a um posto de atendimento presencial.</p></div>
+                <div class="card-motivo"><div class="icon">🧾</div><h3>Emita suas Notas</h3><p>Necessário para NF-e, NFC-e e NFS-e — mantenha o faturamento da sua empresa em dia.</p></div>
+                <div class="card-motivo"><div class="icon">🔒</div><h3>Segurança e Validade</h3><p>Assinatura digital com validade jurídica, garantindo autenticidade nos documentos.</p></div>
+                <div class="card-motivo"><div class="icon">🖥️</div><h3>Fica no Computador</h3><p>O A1 é um arquivo instalado no computador — sem cartão ou token para carregar.</p></div>
+                <div class="card-motivo"><div class="icon">⚡</div><h3>Rápido de Ativar</h3><p>Processo ágil: em pouco tempo você já está pronto para emitir suas notas.</p></div>
+                <div class="card-motivo"><div class="icon">🤝</div><h3>Suporte Guion</h3><p>Conte com nosso time para orientar a instalação e o uso no seu sistema.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="alt">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Como funciona</span>
+                <h2>Compre em 4 passos simples</h2>
+                <p>Tudo online, do pagamento à emissão.</p>
+            </div>
+            <div class="passos-grid">
+                <div class="passo"><div class="num">1</div><h3>Faça o pedido</h3><p>Clique em "Comprar online" e finalize o pagamento no PIX ou cartão.</p></div>
+                <div class="passo"><div class="num">2</div><h3>Envie os dados</h3><p>Informe os dados da empresa para a geração do certificado.</p></div>
+                <div class="passo"><div class="num">3</div><h3>Validação</h3><p>É feita a validação da identidade de forma prática e segura.</p></div>
+                <div class="passo"><div class="num">4</div><h3>Pronto para emitir</h3><p>Instale o certificado e comece a emitir suas notas fiscais.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Dúvidas</span>
+                <h2>Perguntas Frequentes</h2>
+                <p>As dúvidas mais comuns sobre o Certificado Digital A1.</p>
+            </div>
+            <div class="faq-wrap">
+                <details class="faq-item" open>
+                    <summary>O que é o Certificado Digital A1?</summary>
+                    <div class="faq-a">É um certificado no formato de arquivo, instalado diretamente no computador, com validade de 1 ano. Ele funciona como a assinatura digital da sua empresa e é necessário para emitir notas fiscais eletrônicas (NF-e, NFC-e, NFS-e).</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Qual a diferença para o A3?</summary>
+                    <div class="faq-a">O A1 fica salvo no computador como arquivo e tem validade de 1 ano — ideal para quem emite notas pelo sistema. O A3 fica em cartão ou token físico. Aqui o foco é o A1, com todo o processo online.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Consigo comprar tudo pela internet?</summary>
+                    <div class="faq-a">Sim! A compra é 100% online. Você paga no PIX (R$ 149,00 à vista) ou no cartão (R$ 169,00 em até 12x) e segue o processo de emissão sem precisar sair de casa ou da empresa.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Preciso de ajuda para instalar?</summary>
+                    <div class="faq-a">Nosso time de consultores ajuda você na instalação e configuração no seu sistema. É só chamar no WhatsApp (15) 99742-7437 que orientamos em cada etapa.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final" id="contato">
+        <div class="container">
+            <h2>Garanta já o seu Certificado Digital</h2>
+            <p>Compre online agora ou fale com um consultor para tirar suas dúvidas.</p>
+            <a class="btn-whatsapp" href="https://www.asaas.com/c/ndst8ztg9lzk8er2" target="_blank" rel="noopener" style="background:#16a34a;">🛒 Comprar Certificado A1 online</a>
+            <div class="horario" style="margin-top:14px;">Falar com consultor: (15) 99742-7437 · Segunda a Sexta, das 8h às 18h</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <strong>Guion Informática</strong> — Revenda Autorizada DigiSat · WhatsApp: (15) 99654-2319
+            <div class="foot-links">
+                <a href="index.html#sistemas">Sistemas</a>
+                <a href="index.html#segmentos">Segmentos</a>
+                <a href="index.html#videos">Vídeos</a>
+                <a href="certificado.html">Certificado</a>
+                <a href="index.html#contato">Contato</a>
+            </div>
+            © 2026 Guion Informática. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <a class="whats-float" href="https://wa.me/5515997427437?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20Certificado%20Digital%20A1." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">💬</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
