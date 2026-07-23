@@ -84,6 +84,37 @@
       @media (max-width:620px){
         .fp-grid{grid-template-columns:1fr;gap:30px;}
       }
+
+      /* ===== Popup de boas-vindas: Certificado Digital A1 ===== */
+      .cert-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;
+        padding:20px;background:rgba(6,15,35,.72);}
+      .cert-modal.is-open{display:flex;animation:certFade .3s ease;}
+      @keyframes certFade{from{opacity:0}to{opacity:1}}
+      .cert-modal-card{position:relative;background:#fff;max-width:440px;width:100%;border-radius:20px;
+        padding:42px 32px 26px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.45);
+        animation:certPop .35s cubic-bezier(.2,.8,.3,1.15);
+        font-family:'Inter',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+      @keyframes certPop{from{transform:translateY(18px) scale(.96);opacity:0}to{transform:none;opacity:1}}
+      .cert-modal-close{position:absolute;top:14px;right:16px;width:34px;height:34px;border:0;border-radius:50%;
+        background:#f1f4f9;color:#5b667c;font-size:1.15rem;cursor:pointer;line-height:1;transition:background .2s;}
+      .cert-modal-close:hover{background:#e2e8f2;}
+      .cert-modal-ico{width:76px;height:76px;margin:0 auto 18px;border-radius:50%;
+        background:linear-gradient(135deg,#0d3b7a,#1e5bb8);display:flex;align-items:center;justify-content:center;
+        box-shadow:0 10px 26px rgba(13,59,122,.35);}
+      .cert-modal-ico svg{width:38px;height:38px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+      .cert-modal-card h3{margin:0 0 4px;color:#0f2444;font-family:'Sora','Inter',sans-serif;font-weight:800;
+        font-size:1.7rem;line-height:1.15;letter-spacing:-.02em;}
+      .cert-modal-card .cm-sub{color:#5a6b86;margin:0 0 20px;font-size:1.02rem;font-weight:500;}
+      .cert-modal-badge{display:inline-block;background:#16a34a;color:#fff;font-weight:700;
+        text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;padding:10px 22px;border-radius:999px;
+        margin-bottom:20px;box-shadow:0 8px 20px rgba(22,163,74,.3);}
+      .cert-modal-card .cm-desc{color:#4a5a72;font-size:1rem;line-height:1.6;margin:0 0 26px;
+        max-width:340px;margin-left:auto;margin-right:auto;}
+      .cert-modal-cta{display:block;background:#16a34a;color:#fff;font-family:'Sora','Inter',sans-serif;
+        font-weight:700;font-size:1.08rem;letter-spacing:.01em;padding:17px;border-radius:12px;text-decoration:none;
+        transition:transform .2s,filter .2s;box-shadow:0 12px 30px rgba(22,163,74,.35);}
+      .cert-modal-cta:hover{transform:translateY(-2px);filter:brightness(1.06);}
+      .cert-modal-foot{margin:18px 0 0;color:#8a97ab;font-size:.84rem;font-weight:500;letter-spacing:.01em;}
     </style>
 
     <script type="application/ld+json">
@@ -431,6 +462,42 @@
     </footer>
 
     <a class="whats-float" href="https://wa.me/5515996542319?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Guion%20Inform%C3%A1tica%20e%20quero%20saber%20mais%20sobre%20os%20sistemas%20DigiSat." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">💬</a>
+
+    <!-- ===== Popup de boas-vindas: Certificado Digital A1 ===== -->
+    <div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+        <div class="cert-modal-card">
+            <button class="cert-modal-close" id="certModalClose" type="button" aria-label="Fechar">✕</button>
+            <div class="cert-modal-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3 id="certModalTitle">Certificado Digital A1</h3>
+            <p class="cm-sub">com validade jurídica</p>
+            <span class="cert-modal-badge">EM ATÉ 12X SEM JUROS</span>
+            <p class="cm-desc">Emita em minutos. Válido para NF-e, NFC-e, CT-e e assinatura digital de documentos.</p>
+            <a class="cert-modal-cta" href="certificado.html">Emitir meu A1 agora →</a>
+            <p class="cert-modal-foot">🔒 Certificação ICP-Brasil · 100% seguro</p>
+        </div>
+    </div>
+
+    <script>
+      (function(){
+        var modal = document.getElementById('certModal');
+        if(!modal) return;
+        var closeBtn = document.getElementById('certModalClose');
+        function open(){ modal.classList.add('is-open'); }
+        function close(){ modal.classList.remove('is-open'); }
+        // Exibe apenas uma vez por sessão do navegador, após 1,2s
+        var jaViu = false;
+        try { jaViu = !!sessionStorage.getItem('certModalSeen'); } catch(e){}
+        if(!jaViu){
+          setTimeout(function(){
+            open();
+            try { sessionStorage.setItem('certModalSeen','1'); } catch(e){}
+          }, 1200);
+        }
+        closeBtn.addEventListener('click', close);
+        modal.addEventListener('click', function(e){ if(e.target === modal) close(); });
+        document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+      })();
+    </script>
 
     <!-- ===== Hero carrossel: 10s no slide da novidade, depois fade para a frase atual ===== -->
     <script>
